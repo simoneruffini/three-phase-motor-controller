@@ -22,13 +22,20 @@ print("sampling per period: "+ str(period_samp) +", counter max value:"+ str(max
 
 half_period_samp=(int)(period_samp / 2)
 
-a=[]
+a1=[]
+a2=[]
+a3=[]
 c=0
 for val in range(0,period_samp):
-    a.append((int)((max_value*(1+math.sin(c)))/2))
-    print("x: "+str(c)+" sin: "+str(a[-1]))
+    a1.append((int)((max_value*(1+math.sin(c)))/2))
+    a2.append((int)((max_value*(1+math.sin(c+2*math.pi/3)))/2))
+    a3.append((int)((max_value*(1+math.sin(c-2*math.pi/3)))/2))
+    ##print("x: "+str(c)+" sin: "+str(a[-1]))
     c+=2*math.pi/period_samp
+
 
 print("bus frequency: "+ str(bus_freq) +", prescaler: "+ str(prescaler))
 print("sampling per period: "+ str(period_samp) +", counter max value:"+ str(max_value))
-print(a)
+print("channel1 array:\n"+str(a1))
+print("channel2 array:\n"+str(a2))
+print("channel3 array:\n"+str(a3))
