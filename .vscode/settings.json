@@ -1,0 +1,9 @@
+{
+    "stm32-for-vscode.openOCDPath": "openocd",
+    "stm32-for-vscode.makePath": "make",
+    "stm32-for-vscode.armToolchainPath": "",
+    "cortex-debug.armToolchainPath": "",
+    "editor.fontSize": 15,
+    "window.zoomLevel": 1,
+    "C_Cpp.clang_format_style": "Google"
+}
